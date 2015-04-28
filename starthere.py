@@ -66,7 +66,7 @@ def bedroom_p3(awake, fear):
         print "\"I dont know... it sounded like glass being broken"
         fear += 3
     elif awake == 1:
-        print ""
+        print "You are ripped out of your sleep by the unmistakeable sound of glass shadering"
         fear += 4
     else:
         print ""
