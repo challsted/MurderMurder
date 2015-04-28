@@ -25,13 +25,11 @@ This needs to function well, players will be seeing this alot!
 def dead(why):
     print why, "Congratz! You Are Dead!\n"
     usr_yn("Would you like to try again?")
-    if True == "y" or "yes":
+
+    if True:
         start_bedroom()
-    elif False == "n" or "no":
-        exit(0)
     else:
-        print "Im going to assume thats a yes"
-        start_bedroom()
+        exit(0)
 
 """
 Asks the user to press enter before continueing,

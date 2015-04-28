@@ -4,14 +4,14 @@ from main import *
 
 # Need a place to start, lets try starting here!
 def start_bedroom():
-    print "Welcome to MurderMurder by MaSammich aka HackingInformation on GitHub" #Gretiem, and FullOverRide"
+    print "Welcome to MurderMurder by MaSammich aka HackingInformation on GitHub" #Gretiem"#, and FullOverRide"
     clear()
     print "Your sleeping in your bed...."
     print "Dreaming of gumdrops, sugar pops, and a lion named Dandy..."
     print "Oh, what sweet dreams your precious mind ponders"
     clear()
 
-def bedroom_p2():
+def bedroom_p2(awake, fear):
     print "You slightly hear a car door outside of your window, the slam of the door penetrates your sweet dream"
     print "Do you want to investigate or keep sleeping, who knows what you will dream of next?"
     usr_yn("Keep Sleeping?")
@@ -38,13 +38,39 @@ def bedroom_p2():
             if True:
                 print "You stand up and take a look out the window, blood begins to rush though your body a little harder as you do"
                 print "You faintly see a shadow slide past the first floor of your house and around a corner"
-                print "You rub your eyes but the shadow is gone, your speeds up a little and you can feel your self become fully awake"
+                print "You rub your eyes but the shadow is gone, your heart speeds up a little and you can feel your self become fully awake"
                 awake += 1
+                fear += 1
             else:
-                print "You lay back in bed, anoyed that you got up to something to simple"
+                print "You lay back in bed, annoyed that you got up to something to simple"
 
         else:
             print "Its probably just some stray dog walking though the yard, who cares right?"
+
+    return (awake, fear)
+
+def bedroom_p3(awake, fear):
+    # Checks the alertness of the player from the previous function
+    awake, fear = bedroom_p2(awake, fear)
+
+    if awake == 3:
+        print "You hear glass shattering from some room down stairs and a thud on the ground"
+        print "You turn around from your window to face the sound, but only see darkness"
+        print "\"What was that?\" you wonder to your self slightly outloud, shushing your self for not only thinking it"
+        print "Your wife jerks awake and is looking around the room frantically for your consolation, you wisper \"shhhhh\" you say to her"
+        fear += 1
+    elif awake == 2:
+        print "You hear glass shatter from somewhere, your mind franticly decides its coming from somewhere downstairs"
+        print "Your wife awakens with a startle and grabs your arm as she sits up"
+        print "\"What the fuck was that\" she says terrified"
+        print "\"I dont know... it sounded like glass being broken"
+        fear += 3
+    elif awake == 1:
+        print ""
+        fear += 4
+    else:
+        print ""
+        fear +=5
 
 
 
