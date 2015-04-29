@@ -3,23 +3,6 @@
 import sys
 
 """
-Taken from SO: /questions/3041986/python-command-line-yes-no-input
-Converts y to True
-Converts n to False
-"""
-### THIS WHOLE SECTION IS BROKEN... and i dont know why
-def usr_yn(question):
-    sys.stdout.write('%s [y/n]\n' % question)
-    choice = raw_input().lower
-    yes = ["y",'yes','ye','']
-    no = ['n','no']
-    if choice in yes:
-        return True
-    if choice in no:
-        return False
-    else:
-        sys.stdout.write("Please respond with 'y'es or 'n'o\n")
-"""
 A way to tell players they are dead, and why they died on a new line!
 Also, a way for them to exit the script OR to continue playing again!
 This needs to function well, players will be seeing this alot!
